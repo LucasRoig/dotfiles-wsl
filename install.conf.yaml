@@ -68,3 +68,6 @@
   - command: chmod a+x ./scripts/configure-git.sh && ./scripts/configure-git.sh
     description: Configuring git
     stdin: true
+  - command: chmod a+x ./scripts/configure-gcloud.sh && ./scripts/configure-gcloud.sh
+    description: Configuring gcloud
+    stdin: true
