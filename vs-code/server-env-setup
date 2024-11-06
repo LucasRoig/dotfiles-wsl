@@ -1,0 +1,2 @@
+unset http_proxy
+unset HTTP_PROXY

@@ -21,6 +21,7 @@
     # ~/.config/lazydocker: lazydocker
     ~/.zshrc: .zshrc
     # ~/.gitconfig: .gitconfig
+    ~/.vscode-server/server-env-setup: vs-code/server-env-setup
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
