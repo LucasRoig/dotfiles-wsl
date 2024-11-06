@@ -43,15 +43,19 @@ If you want to use the catppuccin theme, you should probably also configure it f
 
 Also you will need a Nerd Font for your terminal [https://www.nerdfonts.com/]
 
+## Prerequisites
+
+* Git needs to be installed on the windows host.
+* A fresh wsl install of Ubuntu
 
 ## Installation
 
-Just clone this repo and run the install script
+Just clone this repo and run the install script as sudo
 
 ```
     git clone https://github.com/LucasRoig/dotfiles-wsl.git .dotfiles
     cd .dotfiles
-    ./install
+    sudo ./install
 ```
 
 When the script ends you can shutdown wsl from a powershell terminal : `wsl --shutdown`, then reopen it and you should see a zsh shell.
