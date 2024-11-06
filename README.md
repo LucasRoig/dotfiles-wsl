@@ -19,12 +19,11 @@ Some utilities are also installed :
 * ripgrep
 * just
 * yq
-
 * lazydocker
+* lazygit
 * kubectl
 * k9s
 * helm
-
 * go
 * node
 * yarn@1
@@ -43,6 +42,23 @@ I use the catppuccin mocha theme so you can choose to install it or keep the def
 If you want to use the catppuccin theme, you should probably also configure it for your terminal on the windows side : [https://github.com/catppuccin/catppuccin]
 
 Also you will need a Nerd Font for your terminal [https://www.nerdfonts.com/]
+
+
+## Installation
+
+Just clone this repo and run the install script
+
+```
+    git clone https://github.com/LucasRoig/dotfiles-wsl.git .dotfiles
+    cd .dotfiles
+    ./install
+```
+
+When the script ends you can shutdown wsl from a powershell terminal : `wsl --shutdown`, then reopen it and you should see a zsh shell.
+
+If you plan on using tmux you should open it and install the plugins with `C-a I` (plugins are handled by tpm [https://github.com/tmux-plugins/tpm])
+
+
 
 ## Aliases
 
