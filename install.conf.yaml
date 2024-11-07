@@ -74,3 +74,7 @@
   - command: chmod a+x ./scripts/configure-gcloud.sh && ./scripts/configure-gcloud.sh
     description: Configuring gcloud
     stdin: true
+  - command: /home/linuxbrew/.linuxbrew/bin/go install sigs.k8s.io/kind@v0.24.0
+    description: install kind
+  - command: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    description: install tmux plugin manager
