@@ -14,7 +14,7 @@
       recursive: true
 
 - link: 
-    # ~/.config/nvim: nvim
+    ~/.config/nvim: tools-config/nvim
     ~/.config/starship.toml: tools-config/starship/starship.toml
     ~/.config/lazygit: tools-config/lazygit
     ~/.config/tmux: tools-config/tmux
