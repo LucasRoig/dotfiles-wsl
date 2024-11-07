@@ -48,6 +48,7 @@
   - command: /home/linuxbrew/.linuxbrew/bin/brew install yq 
   - command: /home/linuxbrew/.linuxbrew/bin/brew install helm 
   - command: /home/linuxbrew/.linuxbrew/bin/brew install kubectl 
+  - command: /home/linuxbrew/.linuxbrew/bin/brew install kubectx 
   - command: /home/linuxbrew/.linuxbrew/bin/brew install go 
   - command: /home/linuxbrew/.linuxbrew/bin/brew install k9s
   - command: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
