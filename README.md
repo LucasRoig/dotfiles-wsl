@@ -55,7 +55,8 @@ Just clone this repo and run the install script as sudo
 ```
     git clone https://github.com/LucasRoig/dotfiles-wsl.git .dotfiles
     cd .dotfiles
-    sudo ./install
+    # install cannot be runned as root !!
+    ./install
 ```
 
 When the script ends you can shutdown wsl from a powershell terminal : `wsl --shutdown`, then reopen it and you should see a zsh shell.
