@@ -5,6 +5,7 @@ setup_gcloud () {
     rm google-cloud-cli-linux-x86_64.tar.gz
     ~/google-cloud-sdk/install.sh
     ~/google-cloud-sdk/bin/gcloud init
+    ~/google-cloud-sdk/bin/gcloud auth configure-docker europe-docker.pkg.dev
 }
 
 if [ -d ~/google-cloud-sdk ]; then
