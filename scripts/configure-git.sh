@@ -34,13 +34,15 @@ then
     PS3="Enter choice index: "
     select item in "${credential_manager_paths[@]}"
     do
-        git config --global credential.helper "$item"
+        selected_file=$(printf %q "$item")
+        git config --global credential.helper "$selected_file"
         break
     done
 elif [ $nb_of_cred_manager -eq 1 ]
 then
     echo Found one credential manager : ${credential_manager_paths[0]}
-    git config --global credential.helper "${credential_manager_paths[0]}"
+    selected_file=$(printf %q "${credential_manager_paths[0]}")
+    git config --global credential.helper "$selected_file"
 else 
     echo No credential mangager found, is git installed on windows ? You can rerun this script later : ./scripts/configure-git
 fi
