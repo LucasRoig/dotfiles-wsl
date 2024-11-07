@@ -15,59 +15,61 @@
 
 - link: 
     # ~/.config/nvim: nvim
-    ~/.config/starship.toml: starship.toml
-    # ~/.config/lazygit: lazygit
-    # ~/.config/tmux: tmux
-    # ~/.config/lazydocker: lazydocker
+    ~/.config/starship.toml: tools-config/starship/starship.toml
+    ~/.config/lazygit: tools-config/lazygit
+    ~/.config/tmux: tools-config/tmux
+    ~/.config/lazydocker: tools-config/lazydocker
     ~/.zshrc: .zshrc
-    # ~/.gitconfig: .gitconfig
-    ~/.vscode-server/server-env-setup: vs-code/server-env-setup
+    ~/.vscode-server/server-env-setup: tools-config/vs-code/server-env-setup
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - command: apt update
-  - command: apt install -y zsh build-essential wget ca-certificates unzip
-  - command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    description: Install Homebrew
-  - command: (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.bashrc
-    description: Adding Homebrew to PATH
-  - command: source ~/.bashrc
-  - command: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
-    description: Installing OhMyZsh
-  - command: chsh -s /usr/bin/zsh $(whoami)
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install starship 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install zoxide 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install gcc 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install ripgrep 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install cmake 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install lazygit 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install jesseduffield/lazydocker/lazydocker 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install tmux 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install neovim 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install just 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install yq 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install helm 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install kubectl 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install go 
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install k9s
-  - command: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    description: Installing zsh-autosuggestions
-  - command: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    description: Installing zsh-syntax-highlighting
-  - command: git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
-    description: Installing zsh-autocomplete
-  - command: git clone --depth 1 https://github.com/catppuccin/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete-catppucin
-  - command: curl https://get.volta.sh | bash -s -- --skip-setup
-    description: installing Volta
-  - command: ~/.volta/bin/volta install node
-    description: installing node
-  - command: ~/.volta/bin/volta install yarn@1
-    description: installing yarn
-  - command: ~/.volta/bin/volta install pnpm
-    description: installing pnpm
-  - command: chmod a+x ./scripts/configure-git.sh && ./scripts/configure-git.sh
-    description: Configuring git
-    stdin: true
-  - command: chmod a+x ./scripts/configure-gcloud.sh && ./scripts/configure-gcloud.sh
-    description: Configuring gcloud
-    stdin: true
+  # - command: apt update
+  # - command: apt install -y zsh build-essential wget ca-certificates unzip
+  # - command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  #   description: Install Homebrew
+  # - command: (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> ~/.bashrc
+  #   description: Adding Homebrew to PATH
+  # - command: source ~/.bashrc
+  # - command: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
+  #   description: Installing OhMyZsh
+  # - command: chsh -s /usr/bin/zsh $(whoami)
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install starship 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install zoxide 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install gcc 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install ripgrep 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install cmake 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install lazygit 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install jesseduffield/lazydocker/lazydocker 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install tmux 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install neovim 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install just 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install yq 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install helm 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install kubectl 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install go 
+  # - command: /home/linuxbrew/.linuxbrew/bin/brew install k9s
+  # - command: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  #   description: Installing zsh-autosuggestions
+  # - command: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  #   description: Installing zsh-syntax-highlighting
+  # - command: git clone --depth 1 https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
+  #   description: Installing zsh-autocomplete
+  # - command: git clone --depth 1 https://github.com/catppuccin/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete-catppucin
+  # - command: curl https://get.volta.sh | bash -s -- --skip-setup
+  #   description: installing Volta
+  # - command: ~/.volta/bin/volta install node
+  #   description: installing node
+  # - command: ~/.volta/bin/volta install yarn@1
+  #   description: installing yarn
+  # - command: ~/.volta/bin/volta install pnpm
+  #   description: installing pnpm
+  # - command: chmod a+x ./scripts/configure-docker.sh && ./scripts/configure-docker.sh
+  #   description: Configuring docker
+  #   stdin: true
+  # - command: chmod a+x ./scripts/configure-git.sh && ./scripts/configure-git.sh
+  #   description: Configuring git
+  #   stdin: true
+  # - command: chmod a+x ./scripts/configure-gcloud.sh && ./scripts/configure-gcloud.sh
+  #   description: Configuring gcloud
+  #   stdin: true

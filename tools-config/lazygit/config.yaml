@@ -1,0 +1,31 @@
+os:
+  # Allows opening files in an already running neovim instance.
+  # This is linked to the nvim alias in zshrc
+  # alias nvim="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#S').pipe"
+  edit: nvim --server /tmp/nvim-server-$(tmux display-message -p '#S').pipe --remote-send "<cmd>lua require('lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
+  open: nvim --server /tmp/nvim-server-$(tmux display-message -p '#S').pipe --remote-send "<cmd>lua require('lazygit-open-file')('{{filename}}', '{{line}}')<CR>"
+
+gui:
+  theme:
+    activeBorderColor:
+      - '#fab387'
+      - bold
+    inactiveBorderColor:
+      - '#a6adc8'
+    optionsTextColor:
+      - '#89b4fa'
+    selectedLineBgColor:
+      - '#313244'
+    cherryPickedCommitBgColor:
+      - '#45475a'
+    cherryPickedCommitFgColor:
+      - '#fab387'
+    unstagedChangesColor:
+      - '#f38ba8'
+    defaultFgColor:
+      - '#cdd6f4'
+    searchingActiveBorderColor:
+      - '#f9e2af'
+
+  authorColors:
+    '*': '#b4befe'

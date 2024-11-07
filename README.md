@@ -35,7 +35,7 @@ The following zsh plugins are installed :
 * zsh-syntax-highlighting
 * zsh-autocomplete
 
-I use the catppuccin mocha theme so you can choose to install it or keep the default theme for the following tools :
+I use the catppuccin mocha theme so it will be installed by default. I plan to add options for you to choose wether you want to install it or keep the default theme for the following tools :
 
 * TODO 
 
@@ -69,3 +69,9 @@ If you plan on using tmux you should open it and install the plugins with `C-a I
 Some aliases are configured in the shell :
 
 * TODO
+
+## TODO
+
+* detail aliases
+* split zshrc
+* optional themes

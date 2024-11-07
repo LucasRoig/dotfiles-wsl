@@ -1,0 +1,17 @@
+snippet pg Postgres Service
+  postgres:
+    image: postgres:16-alpine
+    container_name: ${1:app-name}-postgres
+    #connection string : postgres://${1}:postgres@localhost:5432/${1}?sslmode=disable
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: ${1}
+      POSTGRES_DB: ${1}
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  ${0}
