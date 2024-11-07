@@ -76,3 +76,4 @@ Some aliases are configured in the shell :
 * detail aliases
 * split zshrc
 * optional themes
+* check if gcloud is added to zshrc
