@@ -59,7 +59,7 @@ Just clone this repo and run the install script as sudo
     ./install
 ```
 
-When the script ends you can shutdown wsl from a powershell terminal : `wsl --shutdown`, then reopen it and you should see a zsh shell.
+When the script ends you need to shutdown wsl from a powershell terminal : `wsl --shutdown`, then reopen it and you should see a zsh shell.
 
 If you plan on using tmux you should open it and install the plugins with `C-a I` (plugins are handled by tpm [https://github.com/tmux-plugins/tpm])
 
