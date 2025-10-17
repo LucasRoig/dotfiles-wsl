@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
 alias e.="explorer.exe ."
+alias free-wsl-cache="sudo sync; echo 3 | sudo tee /proc/sys/vm/drop_caches"
 
 #If tmux is running
 if tmux info &> /dev/null; then 
