@@ -50,13 +50,14 @@ Also you will need a Nerd Font for your terminal [https://www.nerdfonts.com/]
 
 ## Installation
 
-Just clone this repo and run the install script as sudo
+Just clone this repo and run the install script whit the righ config
 
 ```
     git clone https://github.com/LucasRoig/dotfiles-wsl.git .dotfiles
     cd .dotfiles
     # install cannot be runned as root !!
-    ./install
+    ./install -c ./config/install.conf.wsl.yaml
+    # or ./install -c ./config/install.conf.ubuntu.yaml
 ```
 
 When the script ends you need to shutdown wsl from a powershell terminal : `wsl --shutdown`, then reopen it and you should see a zsh shell.

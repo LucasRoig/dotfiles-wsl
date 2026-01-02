@@ -1,0 +1,19 @@
+common:
+  - starship
+  - zoxide
+  - gcc
+  - ripgrep 
+  - cmake 
+  - lazygit 
+  - jesseduffield/lazydocker/lazydocker 
+  - tmux 
+  - neovim 
+  - just 
+  - yq 
+ubuntu: []
+wsl: 
+  - go
+  - helm 
+  - kubectl 
+  - kubectx 
+  - k9s

@@ -1,0 +1,43 @@
+- defaults:
+    shell:
+      stdout: true
+      stderr: true
+    link:
+      create: true
+      relink: true
+
+#Cleans dead Links
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
+
+- link: 
+    ~/.config/nvim: tools-config/nvim
+    ~/.config/starship.toml: tools-config/starship/starship.toml
+    ~/.config/lazygit: tools-config/lazygit
+    ~/.config/tmux: tools-config/tmux
+    ~/.config/lazydocker: tools-config/lazydocker
+    ~/.zshrc: .zshrc
+    ~/.config/kitty: tools-config/kitty
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - command: sudo apt update
+  - command: sudo apt install -y build-essential wget ca-certificates unzip
+  - description: installing Kitty
+    command: chmod a+x ./scripts/configure-kitty.ubuntu.sh && ./scripts/configure-kitty.ubuntu.sh    
+  - description: Installing Homebrew 
+    command: chmod a+x ./brew/run-brew-install.sh && ./brew/run-brew-install.sh ubuntu
+  - description: Installing Zsh
+    command: chmod a+x ./scripts/configure-zsh.sh && ./scripts/configure-zsh.sh
+  - description: installing Volta
+    command: chmod a+x ./scripts/configure-volta.sh && ./scripts/configure-volta.sh    
+  - command: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    description: install tmux plugin manager
+  - description: installing Fonts
+    command: chmod a+x ./scripts/configure-fonts.ubuntu.sh && ./scripts/configure-fonts.ubuntu.sh    
+  - description: installing Docker
+    command: chmod a+x ./scripts/configure-docker.ubuntu.sh && ./scripts/configure-docker.ubuntu.sh    
+
