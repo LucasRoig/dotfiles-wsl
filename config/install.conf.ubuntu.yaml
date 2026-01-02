@@ -25,7 +25,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - command: sudo apt update
-  - command: sudo apt install -y build-essential wget ca-certificates unzip pass
+  - command: sudo apt install -y build-essential wget ca-certificates unzip pass curl
   - description: installing Kitty
     command: chmod a+x ./scripts/configure-kitty.ubuntu.sh && ./scripts/configure-kitty.ubuntu.sh    
   - description: Installing Homebrew 
