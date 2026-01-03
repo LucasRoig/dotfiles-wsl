@@ -9,4 +9,4 @@ echo "Installing Git Credential Manager"
 git config --global credential.credentialStore plaintext
 curl -L https://aka.ms/gcm/linux-install-source.sh | sh
 git-credential-manager configure
-rm -rf git-credential-manager
+sudo rm -rf git-credential-manager
