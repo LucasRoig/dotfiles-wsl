@@ -34,6 +34,8 @@
     command: chmod a+x ./scripts/configure-zsh.sh && ./scripts/configure-zsh.sh
   - description: installing Volta
     command: chmod a+x ./scripts/configure-volta.sh && ./scripts/configure-volta.sh    
+  - description: installing Git
+    command: chmod a+x ./scripts/configure-git.ubuntu.sh && ./scripts/configure-git.ubuntu.sh    
   - command: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     description: install tmux plugin manager
   - description: installing Fonts

@@ -69,7 +69,7 @@
   - command: chmod a+x ./scripts/configure-docker.wsl.sh && ./scripts/configure-docker.wsl.sh
     description: Configuring docker
     stdin: true
-  - command: chmod a+x ./scripts/configure-git.sh && ./scripts/configure-git.sh
+  - command: chmod a+x ./scripts/configure-git.sh && ./scripts/configure-git.wsl.sh
     description: Configuring git
     stdin: true
   - command: chmod a+x ./scripts/configure-gcloud.sh && ./scripts/configure-gcloud.sh
