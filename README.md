@@ -6,7 +6,7 @@ It installs the following main tools :
 * prompt: starship
 * package-manager: homebrew
 * Docker
-* Volta for managing node, yarn, pnpm...
+* [Mise](https://mise.jdx.dev/) for managing node, yarn, pnpm...
 
 It also comes with this other tools that you may choose to use or not
 
